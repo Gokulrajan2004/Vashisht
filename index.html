@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Threshold</title>
+    <style>
+        p{
+            font-weight: bold;
+        }
+        body{
+            font-family: 'Courier New', Courier, monospace;
+        }
+        h1{
+            margin-left: 130px;
+        }
+        input{
+            background-color:beige;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            margin-bottom: 5px;
+            padding: 10px;
+        }
+        .eligible {
+            color: green;
+        }
+        .not-eligible {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Threshold</h1>
+    <p>EC Value :</p>
+    <input type="number" style="margin-right: 30px;" id="ec1" placeholder="EC Value Low Limit"><input type="number" id="ec2" placeholder="EC Value High Limit"><br><br>
+    <p>ORP Value :</p>
+    <input type="number" style="margin-right: 30px;"id="orp1" placeholder="ORP Value Low Limit"><input type="number" id="orp2" placeholder="ORP Value High Limit"><br><br>
+    <p>Ph Value :</p>
+    <input type="number" style="margin-right: 30px;"id="ph1" placeholder="Ph Value Low Limit"><input type="number" id="ph2" placeholder="Ph Value High Limit"><br><br>
+    <p>TDS Value :</p>
+    <input type="number" style="margin-right: 30px;"id="tds1" placeholder="TDS Value Low Limit"><input type="number" id="tds2" placeholder="TDS Value High Limit"><br><br>
+    <p>Temperature Value :</p>
+    <input type="number" style="margin-right: 30px;"id="temp1" placeholder="Temperature Low Limit"><input type="number" id="temp2" placeholder="Temperature High Limit"><br><br>
+    <button style="font-family:monospace;" id="calculateBtn">Calculate</button>
+    <p>EC value :  <span id="d1"></span></p>
+    <p>ORP value :  <span id="d2"></span></p>
+    <p>Ph value :  <span id="d3"></span></p>
+    <p>TDS value :  <span id="d4"></span></p>
+    <p>Temperature value :  <span id="d5"></span></p>
+    <script type="module">
+        //low open
+        const lec1 = document.getElementById('ec1');
+        const lorp1 = document.getElementById('orp1');
+        const lph1 = document.getElementById('ph1');
+        const ltds1 = document.getElementById('tds1');
+        const ltemp1 = document.getElementById('temp1');
+        //low close high open
+        const lec2 = document.getElementById('ec2');
+        const lorp2 = document.getElementById('orp2');
+        const lph2 = document.getElementById('ph2');
+        const ltds2 = document.getElementById('tds2');
+        const ltemp2 = document.getElementById('temp2');
+        //high open
+        const calculateBtn = document.getElementById('calculateBtn');
+        const disp1 = document.getElementById('d1');
+        const disp2 = document.getElementById('d2');
+        const disp3 = document.getElementById('d3');
+        const disp4 = document.getElementById('d4');
+        const disp5 = document.getElementById('d5');
+        //high close
+//////////////////////////////////firebase//////////////////////////////////////////////
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.1.0/firebase-app.js";
+        import { getDatabase, ref, onValue } from "https://www.gstatic.com/firebasejs/9.1.0/firebase-database.js";
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyD6Wi9evdOC6k7XsEGetwTyQCKfqzh5SuY",
+            authDomain: "batman-49a37.firebaseapp.com",
+            databaseURL: "https://batman-49a37-default-rtdb.europe-west1.firebasedatabase.app",
+            projectId: "batman-49a37",
+            storageBucket: "batman-49a37.appspot.com",
+            messagingSenderId: "729659926453",
+            appId: "1:729659926453:web:829af833428a60c618dbfc"
+          };
+        const app = initializeApp(firebaseConfig);
+
+//////////////////////////////////firebase[^]//////////////////////////////////////////
+calculateBtn.addEventListener('click', function() {
+    const db = getDatabase();
+    const connect_db = ref(db, 'Values/');
+    console.log("DEBUG: Read function");
+    onValue(connect_db, (snapshot) => {
+        const retrieve_data = snapshot.val();
+        if (!retrieve_data || isNaN(retrieve_data.EC) || isNaN(retrieve_data.ORP) || isNaN(retrieve_data.Ph) || isNaN(retrieve_data.TDS) || isNaN(retrieve_data.Temperature)) {
+            alert("Invalid data from Firebase.");
+            return; // Exit if the data is invalid
+        }
+        const inp1 = retrieve_data.EC;
+        const inp2 = retrieve_data.ORP;
+        const inp3 = retrieve_data.Ph;
+        const inp4 = retrieve_data.TDS;
+        const inp5 = retrieve_data.Temperature;
+
+        // Validate input fields for low and high limits
+        if ([lec1, lec2, lorp1, lorp2, lph1, lph2, ltds1, ltds2, ltemp1, ltemp2].some(input => isNaN(parseFloat(input.value)))) {
+            alert("Please enter valid numbers for all limit fields.");
+            return; // Exit if any input is invalid
+        }
+
+        const l11 = parseFloat(lec1.value);
+        const l21 = parseFloat(lorp1.value);
+        const l31 = parseFloat(lph1.value);
+        const l41 = parseFloat(ltds1.value);
+        const l51 = parseFloat(ltemp1.value);
+
+        const l12 = parseFloat(lec2.value);
+        const l22 = parseFloat(lorp2.value);
+        const l32 = parseFloat(lph2.value);
+        const l42 = parseFloat(ltds2.value);
+        const l52 = parseFloat(ltemp2.value);
+
+        // Now proceed with the eligibility checks
+        checkEligibility(inp1, l11, l12, disp1);
+        checkEligibility(inp2, l21, l22, disp2);
+        checkEligibility(inp3, l31, l32, disp3);
+        checkEligibility(inp4, l41, l42, disp4);
+        checkEligibility(inp5, l51, l52, disp5);
+    });
+});
+
+function checkEligibility(inputValue, lowLimit, highLimit, displayElement) {
+    if (inputValue >= lowLimit && inputValue <= highLimit) {
+        displayElement.textContent = inputValue;
+        displayElement.className = "eligible";
+    } else {
+        displayElement.textContent = inputValue;
+        displayElement.className = "not-eligible";
+    }
+}
+
+    </script>
+</body>
+</html>
