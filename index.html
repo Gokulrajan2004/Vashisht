@@ -6,19 +6,28 @@
     <title>Threshold</title>
     <style>
         p{
+            color: rgb(0,0,0);
+            font-size:x-large;
             font-weight: bold;
         }
         body{
             font-family: 'Courier New', Courier, monospace;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100%;
+           
         }
         h1{
-            margin-left: 130px;
+            margin-left: px;
         }
         input{
-            background-color:beige;
+            background-color:rgb(120, 233, 233);
             font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
             margin-bottom: 5px;
+            border: 1px solid black;
+            border-radius: 10px;
             padding: 10px;
+
         }
         .eligible {
             color: green;
@@ -28,7 +37,8 @@
         }
     </style>
 </head>
-<body>
+<body background="image.png">
+   <div align="center">
     <h1>Threshold</h1>
     <p>EC Value :</p>
     <input type="number" style="margin-right: 30px;" id="ec1" placeholder="EC Value Low Limit"><input type="number" id="ec2" placeholder="EC Value High Limit"><br><br>
@@ -46,6 +56,8 @@
     <p>Ph value :  <span id="d3"></span></p>
     <p>TDS value :  <span id="d4"></span></p>
     <p>Temperature value :  <span id="d5"></span></p>
+</div>
+
     <script type="module">
         //low open
         const lec1 = document.getElementById('ec1');
