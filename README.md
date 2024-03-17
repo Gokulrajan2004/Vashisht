@@ -21,7 +21,7 @@
 
 
  
-![image1](https://github.com/Gokulrajan2004/Vashisht/assets/119476265/aabefcfa-1dc4-4a35-bf64-c45d58994b32)
+  
 
 <h2>Introduction</h2>
 <p>In the realm of aquaculture, maintaining pristine water quality is not just a necessity—it's a critical success factor. Challenges such as stress, disease, and substantial economic losses are often the result of poor water conditions. Addressing these challenges, our project delivers an automated system capable of monitoring key water quality parameters (ORP, pH, temperature, and TDS), and facilitating timely water adjustments through automated solenoid valves and motors. Enhanced with Firebase for real-time data access and control capabilities, our system is poised to set new standards in water quality management within the aquaculture industry. </p>
