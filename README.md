@@ -1,19 +1,18 @@
 ##Automating Commercial Aquaculture Using WiFi Technology
-#Abstract
+Abstract
 This project aims to revolutionize commercial aquaculture by introducing a scalable, cost-effective system for real-time monitoring and management of water quality. Utilizing advanced sensors and WiFi technology, it ensures optimal water conditions, promoting the health and growth of aquatic organisms, thereby enhancing productivity and profitability.
 
 Table of Contents
-Introduction
-Features
-Technology Stack
-Installation
-Usage
-System Architecture
-Contributing
-Results
-Future Work
-License
-Acknowledgements
+-Introduction
+-Features
+-Technology Stack
+-Installation
+-Usage
+-System Architecture
+-Contributing
+-Results
+-Future Work
+-Acknowledgements
 Introduction
 Aquaculture's success critically depends on maintaining optimal water quality. Our project addresses challenges such as stress, disease, and economic losses due to subpar water conditions by delivering an automated, real-time water quality monitoring and adjustment system. This system, enhanced with Firebase for data access and control, sets new standards in aquaculture water quality management.
 
