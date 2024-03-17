@@ -94,7 +94,7 @@ Data is sent to Firebase, allowing remote monitoring and control.</p>
 <p>Gokulrajan R M </p>
 <p> Dhulasiraman M</p>
 <p> Gunashree R </p>
-<p> Madhu Mithra </p>
+<p> Madhu Mithra G</p>
 </body>
  
 
