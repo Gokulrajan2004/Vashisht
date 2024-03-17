@@ -1,5 +1,5 @@
-Automating Commercial Aquaculture Using WiFi Technology
-Abstract
+##Automating Commercial Aquaculture Using WiFi Technology
+#Abstract
 This project aims to revolutionize commercial aquaculture by introducing a scalable, cost-effective system for real-time monitoring and management of water quality. Utilizing advanced sensors and WiFi technology, it ensures optimal water conditions, promoting the health and growth of aquatic organisms, thereby enhancing productivity and profitability.
 
 Table of Contents
