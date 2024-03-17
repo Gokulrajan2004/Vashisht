@@ -89,9 +89,13 @@ Data is sent to Firebase, allowing remote monitoring and control.</p>
 <p>Future enhancements will aim at incorporating advanced AI algorithms for predictive analytics...</p>
 
 <h2>Acknowledgements</h2>
-<p>Project Team --Sparkles</p>
-<p></p>
-
+<p>Project Team --Sparkles--</p>
+<p>Team Members :</p>
+<p>Gokulrajan R M </p>
+<p> Dhulasiraman M</p>
+<p> Gunashree R </p>
+<p> Madhu Mithra </p>
 </body>
+ 
 
 
