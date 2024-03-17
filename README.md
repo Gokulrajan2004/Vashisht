@@ -85,6 +85,21 @@ Data is sent to Firebase, allowing remote monitoring and control.</p>
 
 <h2>Results</h2>
 <p>Our system has been rigorously tested in commercial aquaculture settings, showing significant improvements in water quality management, organism health, and operational efficiency.</p>
+## Video and demonstration
+
+<p align="center">
+  <a href="https://www.youtube.com/watch?v=4k6TebCr6_k">
+    <img src="image1.png" alt="Video Thumbnail" />
+  </a>
+</p>
+
+<p align="center">
+  <a href="https://www.youtube.com/watch?v=4k6TebCr6_k">Watch the video demonstration here</a>
+</p>
+
+<p align="center">
+  Link address: <a href="https://www.youtube.com/watch?v=4k6TebCr6_k">https://youtu.be/c-q3wmDBizs</a>
+</p>
 
 <h2>Future Work</h2>
 <p>Future enhancements will aim at incorporating advanced AI algorithms for predictive analytics...</p>
