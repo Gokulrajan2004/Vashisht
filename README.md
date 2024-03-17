@@ -1,7 +1,27 @@
+<h1 align="center" style="border-bottom: none">
+    ⭐️Automating Commercial Aquaculture Using WiFi Technology⭐️ <br>
+</h1>
 
-<h1>Automating Commercial Aquaculture Using WiFi Technology</h1>
+# [`Website link`](https://gokulrajan.netlify.app/)  
+# [`Demo video link`](https://www.youtube.com/watch?v=4k6TebCr6_k) 
 
-<h2>Abstract</h2>
+## Team Details
+`Team number` : VH016
+
+| Name    | Email           |
+|----------------|--------------------------|
+| Gokulrajan R M | goku22036.ec@rmkec.ac.in |
+| Dhulasiraman M | dhul22034.ec@rmkec.ac.in |
+| Gunashree R    | guna22040.ec@rmkec.ac.in |
+| Madhu Mithra G | madh22082.cs@rmkec.ac.in |
+<div style="display: flex; flex-wrap: wrap;">
+    <img src="https://github.com/Gokulrajan2004/Vashisht/assets/119476265/a810ee79-7411-4f24-8d34-3da03ee79e7f" alt="Image 1" style="width: 40%; margin: 10px;">
+    <img src="https://github.com/Gokulrajan2004/Vashisht/assets/155975387/42718c89-7e28-4658-a4d7-1fb9df4a731d" alt="Image 2" style="width: 50%; margin: 15px;">
+    <img src="https://github.com/Gokulrajan2004/Vashisht/assets/155975387/4a047b3c-1d29-4622-bca8-64d83919e2a0" alt="Image 3" style="width: 40%; margin: 10px;">
+    <img src="https://github.com/Gokulrajan2004/Vashisht/assets/155975387/08dcb40b-249e-4d25-8330-e6b731008a0e" alt="Image 4" style="width: 60%; margin: 20px;">
+</div>
+
+## Problem statement 
 <p> This project introduces a revolutionary, cost-effective, and scalable system designed for the real-time monitoring and management of water quality in commercial aquaculture setups. By harnessing the power of advanced sensors and WiFi technology, the system promises to maintain optimal water conditions, ensuring the health and growth of aquatic organisms and enhancing productivity and profitability in aquaculture operations. </p>
 
 <h2>Table of Contents</h2>
@@ -21,12 +41,11 @@
 
 
  
-  
-
 <h2>Introduction</h2>
 <p>In the realm of aquaculture, maintaining pristine water quality is not just a necessity—it's a critical success factor. Challenges such as stress, disease, and substantial economic losses are often the result of poor water conditions. Addressing these challenges, our project delivers an automated system capable of monitoring key water quality parameters (ORP, pH, temperature, and TDS), and facilitating timely water adjustments through automated solenoid valves and motors. Enhanced with Firebase for real-time data access and control capabilities, our system is poised to set new standards in water quality management within the aquaculture industry. </p>
 
 <h2>Features</h2>
+
 <ul>
     <li>Real-time Water Quality Monitoring</li>
     <li>Remote Access and Control</li>
@@ -35,21 +54,18 @@
     <li>User-friendly Interface</li>
 </ul>
 
-<h2>Technology Stack</h2>
-<ul>
-    <li>ESP8266 Board</li>
-    <li>Sensors</li>
-    <li>Actuators</li>
-    <li>Fish Feeding Mechanism</li>
-    <li>Data Backend</li>
-    <li>Development Environment</li>
-</ul>
+## Techstacks used 
+`Data frontend` , `ESP8266 Board` , `Fish Feeding Mechanism` , `Actuators` , `Sensors`
  
- ![image](https://github.com/Gokulrajan2004/Vashisht/assets/119476265/a810ee79-7411-4f24-8d34-3da03ee79e7f)
+ ## How to run locally 
+After successfully installing and setting up the system, you can begin monitoring and managing your aquaculture water quality with ease. Here’s how to use the system effectively
+ 
+npm install
+npm start
+git clone https://github.com/Gokulrajan2004/Vashisht
 
-
-<h2>Usage</h2>
-<p> After successfully installing and setting up the system, you can begin monitoring and managing your aquaculture water quality with ease. Here’s how to use the system effectively:
+# What's next ?
+<p>Future enhancements will aim at incorporating advanced AI algorithms for predictive analytics...</p>
 
 Monitoring Water Quality
 View Real-time Data: The system continuously measures water quality parameters, including ORP, pH, temperature, and TDS. This data can be viewed in real-time on the LCD display connected to the system for immediate on-site monitoring.
@@ -101,16 +117,9 @@ Data is sent to Firebase, allowing remote monitoring and control.</p>
   Link address: <a href="https://www.youtube.com/watch?v=4k6TebCr6_k">https://youtu.be/c-q3wmDBizs</a>
 </p>
 
-<h2>Future Work</h2>
-<p>Future enhancements will aim at incorporating advanced AI algorithms for predictive analytics...</p>
+## Declaration
+We confirm that the project showcased here was either developed entirely during the hackathon or underwent significant updates within the hackathon timeframe. We understand that if any plagiarism from online sources is detected, our project will be disqualified, and our participation in the hackathon will be revoked.
 
-<h2>Acknowledgements</h2>
-<p>Project Team --Sparkles--</p>
-<p>Team Members :</p>
-<p>Gokulrajan R M </p>
-<p> Dhulasiraman M</p>
-<p> Gunashree R </p>
-<p> Madhu Mithra G</p>
 </body>
  
 
